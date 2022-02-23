@@ -1,0 +1,11 @@
+<%= render 'nav' %>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @restaurant.name %></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><%= @restaurant.category %></h6>
+    <p class="card-text"><%= @restaurant.phone_number %></p>
+    <a href="<%=restaurants_path %>" class="card-link">Go Back</a>
+    <%# new_restaurant_review %>
+    <a href="#" class="card-link">Leave a review</a>
+  </div>
+</div>

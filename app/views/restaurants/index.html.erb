@@ -1,0 +1,17 @@
+<%# nav bar %>
+<%= render 'nav' %>
+<%# nav bar end %>
+<% if false %>
+<ul class="list-group">
+<% @restaurants.each do |restaurant| %>
+<li class="list-group-item"><%= restaurant.name %> -- <%= restaurant.category %>|<%= link_to 'detail', restaurant_path(restaurant) %></li>
+<% end %>
+</ul>
+<% end %>
+<div class="list-group">
+  <% @restaurants.each do |restaurant| %>
+  <a href="<%= restaurant_path(restaurant) %>" class="list-group-item list-group-item-action" aria-current="true">
+    <%= restaurant.name %> -- <%= restaurant.category %>
+  </a>
+  <% end %>
+</div>
